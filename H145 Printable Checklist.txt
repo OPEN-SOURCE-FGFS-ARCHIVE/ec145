@@ -1,0 +1,39 @@
+H145 Printable Checklist / Manual start.
+
+
+
+Starting Engines
+Battery Master Switch -ON
+Flashing Beacon - ON
+Generator 1 Switch - ON
+Generator 2 Switch - ON
+AVIO MSTR Switches 1 and 2 - ON
+Fuel Prime Pump 1 Switch - ON
+Fuel Prime Pump 2 Switch - ON
+on FND Masterlist: PRIME PUMP  - CAUTION ON
+Engine Switch 1 - IDLE
+Eng. 1 N1, TRQ, TOT and N2 - Monitor N1>50%, N2>70%
+Engine Switch 2 - IDLE
+Eng. 2 N1, TRQ, TOT and N2 - Monitor N1>50%, N2>70%
+Fuel Prime Pump 1 Switch - OFF
+Fuel Prime Pump 2 Switch - OFF
+Transfer Pumps A+F - ON
+on FND Masterlist: FWD+AFT FUEL PUMP - WARNING OFF
+Navigation Lights, Strobe - ON as required
+Radios - ON
+
+Before Takeoff
+Engine 1 and 2 Switches - FLIGHT
+Seats, Seat Belts, Shoulder Harnesses, Headset Holder - CHECK SECURE
+Cabin Doors - CLOSED and LOCKED
+Flight Controls - FREE and CORRECT
+Flight Instruments - CHECK and SET
+Fuel Quantity - Check
+Engine Instruments and Ammeter - Check
+Landing Light - ON
+Strobe Lights - ON
+Radios and Avionics - SET
+Autopilot - OFF
+
+HAPPY FLYING !
+

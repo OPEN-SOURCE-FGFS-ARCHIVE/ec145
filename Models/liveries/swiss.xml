@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+        <aircraft-registration type="string">HB-ZRE</aircraft-registration>
+	<model>
+		<livery>
+			<name type="string">REGA - Swiss Air Ambulance</name>
+			<texture>liveries/swiss.png</texture>
+			<rotor>liveries/orange.png</rotor>
+			<texture-skids>liveries/blackskids.png</texture-skids>
+		</livery>
+		<bk117>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bk117>
+	</model>
+	<rendering>
+    <refl_correction type="string">-0.23</refl_correction>
+	<fresnel-factor>0.7</fresnel-factor>
+    </rendering>
+</sim>
+
+</PropertyList>

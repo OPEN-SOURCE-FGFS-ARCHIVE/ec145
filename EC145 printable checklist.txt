@@ -1,0 +1,50 @@
+EC145 Printable Checklist / Manual start.
+
+
+Pre-start check
+Mainp BATT MSTR switch - ON
+Mainp NR/N2 instrument - check full deflection
+Ovrhd FUEL PUMPS XFER (A and F) - ON
+on CAD:check caution F PUMP A/F - warning off
+Ovrhd FUEL PUMPS XFER (A and F) - OFF
+on CAD: caution F PUMP A/F - warning on
+EMER SHED BUS switch - NORM and guarded
+Ovrhd FUEL PRIME PUMPS (1 and 2) - ON
+on CAD:PRIME PUMP caution on and FUEL PRESS caution - warning off
+Ovrhd A.COLL switch - ON
+on VEMD: DC voltage - minimum 23.5 V
+CAD fuel indication - CHECK QTY
+Instruments - CHECK
+Flight controls - CHECK free movement
+Pedals - Centred / Parallel 
+Cyclic stick position -  CHECK
+Twist grip - CHECK free movement, then set both to 0  ( Mouse wheel control )
+
+Starting first engine
+TWIST GRIP Eng.1 - Preselect 30 ( Mouse wheel control )
+Eng.1 start switch - START
+on VEMD: TOT - Monitor, check increase
+N1, N2/NR - Check increase
+Eng.1 start switch - Check off at N1=40
+TWIST GRIP Eng.1 - Rotate to 65 pct N1 ( Mouse wheel control )
+
+Starting second engine
+TWIST GRIP Eng.2 - Preselect 30 ( Mouse wheel control )
+Eng.1 start switch - START
+on VEMD: TOT - Monitor, check increase
+N1, N2/NR - Check increase
+Eng.2 start switch - Check off at N1=40
+TWIST GRIP Eng.2 - Rotate to 65 pct N1 ( Mouse wheel control )
+Ovrhd AVIO MSTR switches (1 and 2) - ON
+Ovrhd FUEL PRIME PUMPS (1 and 2) - OFF
+Ovrhd FUEL PUMPS XFER (A and F) - ON
+
+Pre-takeoff check
+TWIST GRIP Eng.1 and Eng.2 - Rotate smoothly to FLIGHT ( Mouse wheel control )
+All CAD and VEMD indications - CHECK OFF
+Standby horizon - Release cage button
+Pilot/Coplt doors - Check properly closed
+Seats, Seat Belts, Shoulder Harnesses, Headset Holder - CHECK SECURE
+
+
+HAPPY FLYING !

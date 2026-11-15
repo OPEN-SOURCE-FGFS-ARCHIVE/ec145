@@ -1,0 +1,837 @@
+Last Changed Date: 2022-05-29 18:07:29 +0200 (Sun, 29 May 2022)
+Revision: 1082
+
+Changes:
+fixed 'constants' definitions in main xml file
+fixed blade color marking and added trim tabs and elec.-static discarger to blade model
+rotor hub and swash plate details
+added default rotor brake = 0 to base xml set file
+H145 autopilot panel "ON"/"OFF"
+H145 autopilot panel "ON"/"OFF"
+H145 autopilot control panel lights
+H145 autopilot control panel: connected to electrical system AVIO1BUS, connected to FCS,
+overhead: fixed AVIO2 switch binding
+fixed AP control panel logic (AFCS, upper modes)
+fixed 3d details in main model
+fixed more details in 3d main model
+fixed more details in 3d main model
+cockpit and slidong doors outer handles modelled and animated
+corrected sliding doors motion path
+added 6 handles on roof of fuselage
+more details fuselage / sliding doors
+modelled hinges for the ec/h145 cockpit doors
+fixed some surface normals
+added cabin handle at sliding doors
+added two-arm wiper model
+wiperblade now tilts to follow better the curvature of the windscreen
+H145M tail rotor
+H145M tail rotor blade pitch animation
+fixed fenestron hub and blade color
+made strobe and pos. light covers of H145 transparent
+added original version of light pack
+adjusted the strope and pos.- lights positions in the H145M light pack
+added H145 strobes to the side of the fuselage, next to rear cabin window
+disabled the side strobes of the H145 in the EC145 model
+added retractable landing light (underneath fuselage) to the H145M model, removed nose ldg. light because no M - livery has it
+added white tail light to H145M light pack and 3D tail model
+adjusted H145 landing light position
+fixed some flipped surface normals
+
+Affected Files:
+Models/Divers/LandingLight/landinglight.ac
+Models/Divers/LandingLight/landinglight.xml
+Models/Divers/LandingLight/white.png
+Models/Divers/LandingLight
+Models/Divers/wiper/wiper.ac
+Models/Divers/wiper/wiper.xml
+Models/Divers/wiper
+Models/Divers
+Models/EC-145-base.xml
+Models/EC-145.xml
+Models/H-145M.xml
+Models/Lights/LightPackM.xml
+Models/Lights/WhiteLight.xml
+Models/ec145.ac
+Models/instruments/EUcopter-mfd-c/Nasal/airdata.nas
+Models/instruments/ap/ap-m.ac
+Models/instruments/ap/ap-m.png
+Models/instruments/ap/ap-m.xml
+Models/instruments/overhead/overhead.xml
+Models/m-tail.xml
+Models/mainrotor/blade1.xml
+Models/mainrotor/blade2.xml
+Models/mainrotor/blade3.xml
+Models/mainrotor/blade4.xml
+Models/mainrotor/blademaster.ac
+Models/mainrotor/hub.ac
+Models/mainrotor/mainrotor.xml
+Models/tail-m.ac
+Systems/filter.xml
+ec145-base.xml
+h145m-set.xml
+
+
+Last Changed Date: 2022-04-11 14:32:35 +0200 (Mon, 11 Apr 2022)
+Revision: 1049
+
+Changes:
+EC145 cockpit doors, door strut animation
+EC145 rear doors, door strut (lock-track) animation
+EC145 cockpit door jettison levers
+fixed pitot tubes from hexagonal to round shape
+decals next to pitot and door jettison lever
+fixed the glareshield model where the g.s. appeared to be transparent in some places
+added door exit signs and connected them to electrical system via OH pax lights sw.
+added more interior decals
+H145 animated front door handles, fixed proportion of stb.ai fonts
+H145 fixed flipped surface normals on pedals
+fixed propulsion model to start rotor slowly already with starter on
+fixed the slide window frame in the main model that went missing somehow
+modified grease angle in Blender to smoothen some surfaces
+added main rotor hub model
+added main rotor blade master
+fixed 3D model details on rotor head and swash plate
+first version of full swash plate animation
+fixed swash plate animation (to some extend),  adapted engine cowling around rotor hub
+swash plate animation, rotor hub model
+full rotor head pitchlink animation and modelling
+added a scissor-link to rotor head model and animation
+added a scissor-link to rotor head model and animation
+modified ec145 blade model
+modified ec145 blade model
+added a scissor-link to rotor head model and animation
+added a scissor-link to rotor head model and animation
+
+Affected Files:
+Models/EC-145-base.xml
+Models/EC-145_Gendarmerie_tex1.png
+Models/Effects/glareshield-lightmap.eff
+Models/center-spar.png
+Models/ec145.ac
+Models/instruments/EUcopter-mfd-c/svg/stbyai.svg
+Models/instruments/overhead/overhead.xml
+Models/mainrotor/blade1.xml
+Models/mainrotor/blade2.xml
+Models/mainrotor/blade3.xml
+Models/mainrotor/blade4.xml
+Models/mainrotor/blademaster.ac
+Models/mainrotor/hub.ac
+Models/mainrotor/mainrotor.ac
+Models/mainrotor/mainrotor.xml
+Models/mainrotor
+Nasal/propulsion.nas
+Systems/ec145-propulsion.xml
+Systems/electrical.xml
+Systems/filter.xml
+Systems/h145m-propulsion.xml
+h145m-set.xml
+v1.3.1.README
+
+Last Changed Date: 2022-03-10 19:37:28 +0100 (Thu, 10 Mar 2022)
+Revision: 1023
+
+Changes:
+renamed the gui/dialogs dir to gui/Dialogs .
+renamed the gui/dialogs dir to gui/Dialogs .
+fixed surface normals on H145M mainpanel
+fixed upper/lowercase dir name
+new interior view splash screen for the EC145
+
+Affected Files:
+Models/mainpanel/ec145-main-panel.ac
+Splash/splash7.png
+ec145-set.xml
+v1.3.1.README
+
+Last Changed Date: 2022-03-07 19:52:22 +0100 (Mon, 07 Mar 2022)
+Revision: 1018
+
+Changes:
+H145 color coding of battery and gen. symbols on VMD
+H145 fixe click sound for overhead sw., added 'fire' gong to sounds
+H145 VMD generator and batt symbol colors
+H145 VMD OEI training mode symbol, gen symbol colors
+H145 VMD new gen.&batt. warning colors, new color fill mdf-API option
+H145 warning unit now connected to the emergency elec. bus
+simulated fire smoke and extinguisher plume with particle animations, for both engines
+moved simulation code for fire smoke and extinguisher plume to Effects/Engine
+more fire extinguisher logic
+added EXT and ACTIVE indications to H145 warning unit
+added heat blur for engines exhaust via particle system
+improved engine heat blur and added a failure menu dialog box
+fixed engine 2 fire model, added failure dialog for random engine fire
+Revised the propulsion model code to work with YASIMS internal governor instead of a Nasal implementation to avoid performance issues at low frame rates. Introduced and extra property rules file for this.
+changed HELIONIX screen font to ECAMFontRegular.ttf from A320 canvas screens
+adjusted letter spacing on HELIONIX screens to new font type
+adjusted letter spacing on HELIONIX screens to new font type
+adjusted HELIONIX EFB & FND screens layout to new font type
+designed special Helionix font including the small letters 'g','h','m','n' and adapted screen code for it
+more font fixing
+more Helionix screen font fixing
+fixed Helionix spacing for number one and decimal point, reduced dirt effect factor
+added some interior view for splash screens
+
+Affected Files:
+Fonts/ECAMFontRegular.ttf
+Fonts/Helionix.ttf
+Fonts
+Models/EC-145-base.xml
+Models/Effects/Engine/EngExtPlume.xml
+Models/Effects/Engine/EngFireSmoke.xml
+Models/Effects/Engine/EngHeatBlur.xml
+Models/Effects/Engine/Ext.png
+Models/Effects/Engine/fire-and-smoke.xml
+Models/Effects/Engine
+Models/Effects/mfd-screen.eff
+Models/instruments/EUcopter-mfd-c/Nasal/common.nas
+Models/instruments/EUcopter-mfd-c/Nasal/dmap_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/fnd_func.nas
+Models/instruments/EUcopter-mfd-c/Nasal/fnd_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/mfd.nas
+Models/instruments/EUcopter-mfd-c/Nasal/navd_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/vmd_func.nas
+Models/instruments/EUcopter-mfd-c/Nasal/vmd_page.nas
+Models/instruments/EUcopter-mfd-c/svg/dmap.svg
+Models/instruments/EUcopter-mfd-c/svg/efb.svg
+Models/instruments/EUcopter-mfd-c/svg/fnd.svg
+Models/instruments/EUcopter-mfd-c/svg/init.svg
+Models/instruments/EUcopter-mfd-c/svg/navd.svg
+Models/instruments/EUcopter-mfd-c/svg/vmd.svg
+Models/instruments/overhead/overhead.xml
+Models/instruments/warn-D2/warn.ac
+Models/instruments/warn-D2/warn.png
+Models/instruments/warn-D2/warn.xml
+Models/mainpanel/ec145ecp-texture.png
+Nasal/enginecontrol-h145.nas
+Nasal/propulsion.nas
+Sounds/fire-engine-1.wav
+Sounds/fire-engine-2.wav
+Sounds/sound.xml
+Splash/splash.png
+Splash/splash6.png
+Splash
+Systems/ec145-propulsion.xml
+Systems/electrical.xml
+Systems/filter.xml
+Systems/h145m-propulsion.xml
+Systems/propulsion-rules.xml
+ec145-base.xml
+gui/dialogs/failures.xml
+gui/dialogs
+gui
+h145m-set.xml
+v1.3.1.README
+
+
+Last Changed Date: 2021-12-03 20:58:02 +0100 (Fri, 03 Dec 2021)
+Revision: 995
+
+Changes:
+implemented the VMD "NUM"-button on the H145M, that allows to declutter the VMD-display by removing some numeric  readouts
+made the 'float arm' sw. in the  overhead panel permanently visible
+exchanged deprecated effect model-combined-deferred by model-combined
+new warning unit (panel) for the H145M
+material animation for lighting up warning unit
+animated 'pre-flight test' sw of overhead panel, prop: /controls/test/p-flight
+connected the new warning unit's lamps via property rules in filter.xml
+fire and fire-bottle test for new H145 warning unit
+H145 revised W/U  texture, modelled emergency bus and stby battery in electrical system
+H145 revised main panel details, ECP main sw. now textured and visible when cabin dome light is on, current draw of starters increased to 250 Amp
+
+Affected Files:
+Models/instruments/EUcopter-mfd-c/Nasal/airdata.nas
+Models/instruments/EUcopter-mfd-c/Nasal/helionix_mfd_control.nas
+Models/instruments/EUcopter-mfd-c/Nasal/vmd_func.nas
+Models/instruments/EUcopter-mfd-c/Nasal/vmd_page.nas
+Models/instruments/EUcopter-mfd-c/svg/vmd.svg
+Models/instruments/overhead/overhead.xml
+Models/instruments/warn-D2/warn.ac
+Models/instruments/warn-D2/warn.png
+Models/instruments/warn-D2/warn.xml
+Models/instruments/warn-D2
+Models/instruments.xml
+Models/mainpanel/ec145-main-panel.ac
+Models/mainpanel/ec145-main-panel.xml
+Models/mainpanel/ec145ecp-texture.png
+Systems/electrical.xml
+Systems/filter.xml
+ec145-base.xml
+v1.3.1.README
+
+
+Last Changed Date: 2021-11-20 13:55:23 +0100 (Sat, 20 Nov 2021)
+Revision: 985
+
+Changes:
+added a very simple hydraulic system sim. to the H145M to allow the use of the hydr test sw. on the overhead panel
+added caution messages on H145M masterlist for hydraulic pressure and pitot heaters
+small changes to hydr pressure model
+added fire warning test items to H145M masterlist and warning panel
+fixed a bug in the electric system where the cabin floodlight would always drain the batt. even with gen. running
+connected the cabin floodlight to ground power bus and integrated the ground power sw. into the electr. system, added 'batt hot bus' to electr.sys.
+added fire bottle test mesg to H145M masterlist
+connected pitot heaters to electrical system
+
+Affected Files:
+Models/instruments/EUcopter-mfd-c/Nasal/airdata.nas
+Models/instruments/EUcopter-mfd-c/Nasal/vmd_page.nas
+Models/instruments/overhead/overhead.xml
+Models/instruments/warn/warn.ac
+Models/instruments/warn/warn.xml
+Nasal/bk117.nas
+Nasal/masterlist-h145.nas
+Systems/electrical.xml
+ec145-base.xml
+
+
+Last Changed Date: 2021-11-14 18:46:17 +0100 (Sun, 14 Nov 2021)
+Revision: 977
+
+Changes:
+fixed the appearance of the character "zero" in the ISO font on the Helionix displays
+fixed an issue wih the ISO font for the nav frequency numerals
+introduced axis objects used for knob rotation animation in overhead model
+update on h145 overhead panel model
+h145 overhead panel model, switches shininess
+h145 overhead panel model improvement
+h145 overhead panel model improvement
+connect the "HISL" sw. (High Intensity SL) in overhead panel to the electrical system. To activate the SL, the HISL sw. must be set to "arm"(ed) first.
+Fire & hydr. test sw on overhead panel animated
+more switches and the new lightmap for the overhead panel, default switch pos. in the -set - files.
+
+Affected Files:
+Models/instruments/EUcopter-mfd-c/Nasal/common.nas
+Models/instruments/EUcopter-mfd-c/Nasal/fnd_func.nas
+Models/instruments/overhead/OverheadPanel.png
+Models/instruments/overhead/OverheadPanel_LM.png
+Models/instruments/overhead/overhead.ac
+Models/instruments/overhead/overhead.xml
+Systems/electrical.xml
+ec145-base.xml
+ec145-set.xml
+h145m-set.xml
+
+Last Changed Date: 2021-11-06 13:22:41 +0100 (Sat, 06 Nov 2021)
+Revision: 965
+
+Changes:
+fine-tuning of mainpanel elements brightness/contrast
+added texture with wear marks to left pedals
+added texture to right pedals
+fixed H145 FND screen fonts to match more the real fonts used on that screen
+fixed H145 NAVD screen fonts to match more the real fonts used on that screen, adjusted symbol size
+fixed H145 VMD screen fonts to match more the real fonts used on that screen, adjusted screen code
+added off-route button to Helionix NAVD and symbols for fixes on NAVD
+fixed Helionix 'NAVD' - display symbols for nav-fixes, heading bug animation
+fixed bug in Helionix 'NAVD' - display, causing unnamed nav-fixes being displayed
+top row button labels on Helionix MFDs now show only the availble screens for that MFD (as configured in h145m-set.xml)
+added a electronic flight bag (EFB) page to Helionix screens
+added more EFB pages
+fixed a problem with the mainpanel shadowmap after editing the model in Blender 2.93
+fine tuning of some MEGHAS MDF elements
+small improvement in Helionix Canvas performance
+more simplification in Helionix Canvas callback method
+cleaned up Helionix Canvas code, added new 'funcof' callback feature
+fixed the glareshield and panel lightmap intensity in the H145M
+merged with FGUK version dated Nov. 2021,  re-connected lights to the electrical system (Beacon, Strobe, Ldg-L, Search-L, Green, Red)
+
+Affected Files:
+Models/Effects/glareshield-lightmap.eff
+Models/Effects/h145-mainpanel-lightmap.eff
+Models/Lights/Beacon.xml
+Models/Lights/GreenLight.xml
+Models/Lights/LandingLight.xml
+Models/Lights/RedLight.xml
+Models/Lights/Strobe.xml
+Models/Lights/WhiteLight.xml
+Models/Lights/searchlight.xml
+Models/ec145.ac
+Models/instruments/EUcopter-mfd-c/Nasal/airdata.nas
+Models/instruments/EUcopter-mfd-c/Nasal/common.nas
+Models/instruments/EUcopter-mfd-c/Nasal/dmap_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/efb_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/fnd_func.nas
+Models/instruments/EUcopter-mfd-c/Nasal/fnd_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/helionix.nas
+Models/instruments/EUcopter-mfd-c/Nasal/helionix_mfd_control.nas
+Models/instruments/EUcopter-mfd-c/Nasal/mfd.nas
+Models/instruments/EUcopter-mfd-c/Nasal/navd_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/navsymbols.nas
+Models/instruments/EUcopter-mfd-c/Nasal/pfd_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/sensor.nas
+Models/instruments/EUcopter-mfd-c/Nasal/vmd_func.nas
+Models/instruments/EUcopter-mfd-c/Nasal/vmd_page.nas
+Models/instruments/EUcopter-mfd-c/mfd1.xml
+Models/instruments/EUcopter-mfd-c/mfd2.xml
+Models/instruments/EUcopter-mfd-c/svg/dmap.svg
+Models/instruments/EUcopter-mfd-c/svg/efb.svg
+Models/instruments/EUcopter-mfd-c/svg/fnd.svg
+Models/instruments/EUcopter-mfd-c/svg/init2.svg
+Models/instruments/EUcopter-mfd-c/svg/navd.svg
+Models/instruments/EUcopter-mfd-c/svg/pfd.svg
+Models/instruments/EUcopter-mfd-c/svg/vmd.svg
+Models/liveries/CCC.xml
+Models/liveries/JFK.xml
+Models/liveries/LAE.xml
+Models/liveries/SCAA.xml
+Models/liveries/medicopter117.xml
+Models/liveries/swiss.xml
+Models/liveriesH/AHMD.xml
+Models/liveriesH/Airbus.xml
+Models/liveriesH/BundeswehrSAR.xml
+Models/liveriesH/Default.xml
+Models/liveriesH/LVMPD.xml
+Models/liveriesH/LuftBKS.xml
+Models/liveriesH/MMES.xml
+Models/liveriesH/Polizei.xml
+Models/liveriesH/Qinetiq.xml
+Models/liveriesH/RAF_DHFS.xml
+Models/liveriesH/REGA.xml
+Models/liveriesH/SAS.xml
+Models/liveriesH/Westpac.xml
+Models/mainpanel/ec145-main-panel.ac
+Models/mainpanel/ec145-main-panel.xml
+Models/pedal.png
+Nasal/masterlist-h145.nas
+Sounds/sound.xml
+ec145-base.xml
+h145m-set.xml
+
+Last Changed Date: 2021-02-13 20:42:19 +0100 (Sat, 13 Feb 2021)
+Revision: 943
+
+Changes:
+fixed font size and triggers for warning panel
+fixed some limits for the warning panel lights, added headset holder to checklists
+minor instrument texture changes
+added 3D elements to CDU, fix screen light emission of CDU
+added inner/middle/out marker annunciators to H/EC145 PDFs
+added floodlight to overhead panel, revised lightmap for floodlight, simulate cabin ambient lighting from floodlight  by material emission animations
+connected overhead floodlight to battery directly, added floodlight 'halo' effect and effect of floodlight on mainpanel instruments( simulated via material emission)
+fixed overhead floodlight effect, added power button to H145M MFDs
+added battery discharge simulation to electrical model
+improved battery code in electrical loads model
+lightmap for overhead panel and center spar for the cockpit floodlight effect
+added lightmap to implement floodlight effect on glareshield
+added lightmaps for H145 mainpanel and MFDs to implement overhead floodlight effect
+improved glareshield lightmap and new ECP lightmap for the H145M
+merge with FGUK version dated 2021-02-01. with three issues: payload FLIR has filename case issue; pilot cyclic has disappeared; aircraft registration prop is not set in livery code
+fixed case issue in FLIR filename, fixed missing pilot cyclic bug
+merged with FGUK  version date 2021-02-01 : '-set' model files and H-livery files
+resived livery definition files to include the aircraft registration for display on mainpainel
+
+Affected Files:
+Models/Effects/bk117glaresh-shadows.eff
+Models/Effects/center-spar-lightmap.eff
+Models/Effects/glareshield-lightmap.eff
+Models/Effects/h145-mainpanel-lightmap.eff
+Models/Effects/h145ecp-lightmap.eff
+Models/Effects/mfd-lightmap.eff
+Models/Effects/overhead-flood-lightmap.eff
+Models/Effects/overhead-lightmap.eff
+Models/instruments/EUcopter-mfd-c/Nasal/airdata.nas
+Models/instruments/EUcopter-mfd-c/Nasal/fnd_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/helionix_mfd_control.nas
+Models/instruments/EUcopter-mfd-c/Nasal/pfd_page.nas
+Models/instruments/EUcopter-mfd-c/svg/fnd.svg
+Models/instruments/EUcopter-mfd-c/svg/pfd.svg
+Models/instruments/GTN750/gtn750.png
+Models/instruments/GTN750/gtn750.xml
+Models/instruments/ap/ap-m.xml
+Models/instruments/ap/ap1-0.xml
+Models/instruments/ap/ap1-1.xml
+Models/instruments/ap/ap2.xml
+Models/instruments/audiopanel/audiopanel.xml
+Models/instruments/ccp/ccp.xml
+Models/instruments/cdu/boeing.ac
+Models/instruments/cdu/boeing.xml
+Models/instruments/cdu/display-text-value.xml
+Models/instruments/overhead/OverheadPanel.png
+Models/instruments/overhead/OverheadPanel_LM.png
+Models/instruments/overhead/overhead.ac
+Models/instruments/overhead/overhead.xml
+Models/instruments/overhead/overheadlight.ac
+Models/instruments/overhead/overheadlight.xml
+Models/instruments/warn/warn.xml
+Models/liveries/CCC.xml
+Models/liveries/JFK.xml
+Models/liveries/LAE.xml
+Models/liveries/SCAA.xml
+Models/liveries/medicopter117.xml
+Models/liveries/swiss.xml
+Models/liveriesH/AHMD.xml
+Models/liveriesH/Airbus.xml
+Models/liveriesH/BundeswehrSAR.xml
+Models/liveriesH/Default.xml
+Models/liveriesH/LVMPD.xml
+Models/liveriesH/LuftBKS.xml
+Models/liveriesH/MMES.xml
+Models/liveriesH/Polizei.xml
+Models/liveriesH/Qinetiq.xml
+Models/liveriesH/RAF_DHFS.xml
+Models/liveriesH/REGA.xml
+Models/liveriesH/SAS.xml
+Models/liveriesH/Westpac.xml
+Models/liveriesH
+Models/mainpanel/ec145-main-panel.ac
+Models/mainpanel/ec145-main-panel.xml
+Models/mainpanel/ec145ecp-texture_LM.png
+Models/mainpanel/gray.png
+Models/mainpanel/h145-elt-tex.png
+Models/mainpanel/h145-mainpanel_LM.png
+Models/mainpanel/mfd_LM.png
+Models/mainpanel-C2/ec145C2-main-panel.xml
+Models/payload/flir/flirM.xml
+Models/payload/flir
+Models/EC-145-base.xml
+Models/EC-145.xml
+Models/H-145M.xml
+Models/center-spar_LM.png
+Models/collective-C2.xml
+Models/collective.xml
+Models/ec145.ac
+Models/glaresh-texture.png
+Models/glaresh_LM.png
+Models/instruments-C2.xml
+Models/instruments.xml
+Nasal/bk117.nas
+Nasal/electrical-loads.nas
+Systems/electrical.xml
+ec145-base.xml
+ec145-checklists.xml
+ec145-set.xml
+h145m-checklists.xml
+h145m-set.xml
+h145m.xml
+
+Last Changed Date: 2020-12-04 20:34:11 +0100 (Fri, 04 Dec 2020)
+Revision: 923
+
+Changes:
+animated GTN750 radio selector knobs
+more on-screen symbols, fixed colors and texture of the GTN750
+improved audiopanel hi-res texture and buttons placement
+animated volume knob of audiopanel & controls sim. avionics sound volume
+fixed mainpanel lightmaps and added implicit lightmap to audipanel, AP, Garmin GTN instruments
+connected CDU and GNS430 to electrical model (power and instr.light)
+added the H145 cockpit control panel (CCP) to centre console
+changed AP panel texture brightness to match otherdarker  panels
+fixed design of mount screws of centre consoles instruments
+EC145 detailed arrangement of all centre console elements, cabin heat control levers
+texture for cabin heat levers, audiopanel can control COMM1/2 Vol.
+animated nav1/2, adf knobs in audiopanel, aligned H145M centre console instruments, H145M main panel texture, added cabin heat levers to H145M
+added euronav (map generator) control panel and cabin heat ctrl levers to H145 centre console
+added 'data transfer device' DTD to H145M centre console (non functional)
+added a H145M style AP control panel on centre console
+fixed H145 APCP texture font
+added control lights to H145M APCP
+added ELT to H145M mainpanel
+improved 3d-model and texture of H145M MFDs
+animated H145 Stby Horizon knob and MFD knobs
+improved warning panel 3d model
+connected warning panel to electrical system (essential bus)
+
+Affected Files:
+Models/Effects/ecp-lightmap.eff
+Models/Effects/implicit-lightmap.eff
+Models/Effects/whitemap.png
+Models/instruments/EUcopter-mfd-c/Nasal/airdata.nas
+Models/instruments/GNS430/gns430-radio/gns430-radio.nas
+Models/instruments/GNS430/GNS430.xml
+Models/instruments/GTN750/gtn750-1.xml
+Models/instruments/GTN750/gtn750-2.xml
+Models/instruments/GTN750/gtn750.ac
+Models/instruments/GTN750/gtn750.nas
+Models/instruments/GTN750/gtn750.png
+Models/instruments/GTN750/gtn750.svg
+Models/instruments/GTN750/gtn750.xml
+Models/instruments/ap/ap-m.ac
+Models/instruments/ap/ap-m.png
+Models/instruments/ap/ap-m.xml
+Models/instruments/ap/ap1-0.xml
+Models/instruments/ap/ap1-1.xml
+Models/instruments/ap/ap1.ac
+Models/instruments/ap/ap2.ac
+Models/instruments/ap/ap2.png
+Models/instruments/ap/ap2.xml
+Models/instruments/audiopanel/audiopanel.ac
+Models/instruments/audiopanel/audiopanel.png
+Models/instruments/audiopanel/audiopanel.xml
+Models/instruments/ccp/ccp.ac
+Models/instruments/ccp/ccp.png
+Models/instruments/ccp/ccp.xml
+Models/instruments/ccp
+Models/instruments/cdu/boeing.xml
+Models/instruments/cdu
+Models/instruments/warn/warn.ac
+Models/instruments/warn/warn.xml
+Models/instruments/warn
+Models/mainpanel/ec145-main-panel.ac
+Models/mainpanel/ec145-main-panel.xml
+Models/mainpanel/ec145ecp-texture_LM.png
+Models/mainpanel/h145-dtd-tex.png
+Models/mainpanel/h145-elt-tex.png
+Models/mainpanel/h145-mainpanel-tex.png
+Models/mainpanel/mfd.png
+Models/mainpanel-C2/ec145C2-main-panel.ac
+Models/mainpanel-C2/ec145C2-main-panel.xml
+Models/mainpanel-C2/ec145C2-mainpanel-tex.png
+Models/EC-145.xml
+Models/ec145.ac
+Models/instruments-C2.xml
+Models/instruments.xml
+
+Last Changed Date: 2020-11-04 20:17:31 +0100 (Wed, 04 Nov 2020)
+Revision: 897
+
+Changes:
+moved tachimeter Nasal code to a separate Nasal file
+added a headset hanging from the headset holder
+added headset animation
+improved headset animation with FDM y-acceleration, and z angular acceleration
+added osciallation component to headset animation
+added more headset animation from accelerations
+added a spiral cable to headset
+fixed an error with angles in the headset animation code
+added a texture for the headset
+fixed headset animation update frequency
+headset 3d model
+added a Canvas based COM/VLOC menu to the GNS430
+added COMM/NAV radio functions to GNS430
+enabled changing between comm and nav radio modes in GNS430 radio menu
+removed the KNS-80 radio from centre console as GNS430 is now setting COMM1/NAV1 radio
+added capability to invoke and run 2 instances of the GNS430, one for comm/nav1 and one for comm/nav2
+added comm2 to airdata
+added an audio panel (still with a low-res texture) and included 2 copies of it  in the EC145 center console
+added a Garmin GTN750 3d model (currently non-functional)
+added FG1000 moving map to Garmin GTN750 , fixed appearance of FG1000 map in Helionix DMAP display
+added menu icons in the GTN750 svg
+
+Affected Files:
+Models/headset/headset.ac
+Models/headset/headset.nas
+Models/headset/headset.png
+Models/headset/headset.xml
+Models/headset
+Models/instruments/EUcopter-mfd-c/Nasal/airdata.nas
+Models/instruments/EUcopter-mfd-c/Nasal/common.nas
+Models/instruments/EUcopter-mfd-c/Nasal/helionix.nas
+Models/instruments/EUcopter-mfd-c/Nasal/meghas.nas
+Models/instruments/GNS430/gns430-radio/black.png
+Models/instruments/GNS430/gns430-radio/gns430-radio-1.ac
+Models/instruments/GNS430/gns430-radio/gns430-radio-1.nas
+Models/instruments/GNS430/gns430-radio/gns430-radio-1.xml
+Models/instruments/GNS430/gns430-radio/gns430-radio-2.nas
+Models/instruments/GNS430/gns430-radio/gns430-radio.nas
+Models/instruments/GNS430/gns430-radio/gns430-radio.svg
+Models/instruments/GNS430/gns430-radio
+Models/instruments/GNS430/GNS430-1.xml
+Models/instruments/GNS430/GNS430-2.xml
+Models/instruments/GNS430/GNS430.xml
+Models/instruments/GTN750/black.png
+Models/instruments/GTN750/gtn750-1.ac
+Models/instruments/GTN750/gtn750-1.nas
+Models/instruments/GTN750/gtn750-1.xml
+Models/instruments/GTN750/gtn750-2.ac
+Models/instruments/GTN750/gtn750-2.nas
+Models/instruments/GTN750/gtn750-2.xml
+Models/instruments/GTN750/gtn750.ac
+Models/instruments/GTN750/gtn750.nas
+Models/instruments/GTN750/gtn750.png
+Models/instruments/GTN750/gtn750.svg
+Models/instruments/GTN750/gtn750.xml
+Models/instruments/GTN750
+Models/instruments/ap/ap1.ac
+Models/instruments/ap/ap2.ac
+Models/instruments/audiopanel/audiopanel.ac
+Models/instruments/audiopanel/audiopanel.png
+Models/instruments/audiopanel/audiopanel.xml
+Models/instruments/audiopanel
+Models/instruments/chronograph/chronograph.xml
+Models/instruments/tach/tach.nas
+Models/instruments/tach/tach.xml
+Models/mainpanel/ec145-main-panel.ac
+Models/mainpanel/fg1000-dmap.ac
+Models/mainpanel/fg1000-dmap.xml
+Models/EC-145-base.xml
+Models/instruments-C2.xml
+Models/instruments.xml
+Nasal/FGUK1000.nas
+Nasal/bk117.nas
+Systems/electrical.xml
+ec145-base.xml
+ec145-set.xml
+h145m-set.xml
+
+Last Changed Date: 2020-10-04 19:58:47 +0200 (Sun, 04 Oct 2020)
+Revision: 871
+
+Changes:
+relocated call to compile for the filer function body
+added new sensor callback method that combines all transformation of all canvas elements into ONE callback, instead of one callback per canvas element, to improve performance
+new code callback for settext and setvisibel in canvas mfd
+added an 'if page is active' condition to generated code for canvas
+changed callback routine
+improved airdata computer (adc) obj. definition
+simplification and beautification of the sensor class code
+added the 'notin' option to conditions in MFD
+fixed some conditions in canvas code for Helionix displays
+Stuarts changes of model filenames
+Stuarts new H145/EC145 tail models
+fixed bug in ec145 model where any outside view of tail causes segfault
+fixed some issues with sensor object initialization
+new adc method to add anonymous sensor to air data computer
+added more sensors to airdata to avoid so many duplicate, anonymous functions
+switched all anonymous sensors to adc.add() method
+added an option in Helionix common.nas to use a central update loop instead of listeners for Canvas element updates
+fixed correct callsign label positions on ec145 and h145 mainpanels
+fixed an issue with Sensors' timer loop updates for Canvas
+added a mainpanel texture for ec145
+added start and eng fail annunciators to ec145 VEMD display, work on ec145 mainpanel texture
+fixed some issues with the general Helionix 3D bezel model (for later use of Helionix in other aircrafts)
+improved ec145 mainpanel texture, changed FLI display algorithm for ec145 VEMD
+
+Affected Files:
+Models/instruments/EUcopter-mfd-c/Models/mfd-base.ac
+Models/instruments/EUcopter-mfd-c/Models/mfd0.ac
+Models/instruments/EUcopter-mfd-c/Models/mfd1.ac
+Models/instruments/EUcopter-mfd-c/Models/mfd2.ac
+Models/instruments/EUcopter-mfd-c/Models/mfd3.ac
+Models/instruments/EUcopter-mfd-c/Nasal/airdata.nas
+Models/instruments/EUcopter-mfd-c/Nasal/cad_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/common.nas
+Models/instruments/EUcopter-mfd-c/Nasal/dmap_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/fnd_func.nas
+Models/instruments/EUcopter-mfd-c/Nasal/fnd_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/helionix.nas
+Models/instruments/EUcopter-mfd-c/Nasal/init2_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/init_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/meghas.nas
+Models/instruments/EUcopter-mfd-c/Nasal/mfd.nas
+Models/instruments/EUcopter-mfd-c/Nasal/navd_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/pfd_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/sensor.nas
+Models/instruments/EUcopter-mfd-c/Nasal/stbyai_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/vemd_page.nas
+Models/instruments/EUcopter-mfd-c/Nasal/vmd_func.nas
+Models/instruments/EUcopter-mfd-c/Nasal/vmd_page.nas
+Models/instruments/EUcopter-mfd-c/svg/vemd.svg
+Models/instruments/EUcopter-mfd-c/mfd-base.xml
+Models/instruments/EUcopter-mfd-c/mfd0.xml
+Models/instruments/EUcopter-mfd-c/mfd1.xml
+Models/instruments/EUcopter-mfd-c/mfd2.xml
+Models/instruments/EUcopter-mfd-c/mfd3.xml
+Models/mainpanel/ec145-main-panel.xml
+Models/mainpanel-C2/ec145C2-main-panel.ac
+Models/mainpanel-C2/ec145C2-main-panel.xml
+Models/mainpanel-C2/ec145C2-mainpanel-tex.png
+Models/mainpanel-C2/engine_panel.png
+Models/EC-145-base.xml
+Models/EC-145.xml
+Models/H-145M.xml
+Models/center-spar.png
+Models/ec-tail.xml
+Models/ec145.ac
+Nasal/vemd.nas
+ec145-set.xml
+h145m-set.xml
+v1.3.1.README
+
+
+
+
+
+2020-09-17 15:51:20 +0200
+Revision: 846
+Changes and release notes to v1.3.1:
+
+* The aircraft *-set file was split into three parts: 
+  A common part ec145-base.xml and 
+  the two model specific h145-set.xml and ec145-set.xml . 
+  ec145-base.xml is included from those 
+  two via <PropertyList include="ec145-base.xml">
+  
+  The split was also done for main model, instruments and
+  mainpanel and the filenames for the EC145 are often having
+  "-C2" to indicate that they are for the 
+  BK117C2 (i.e. the EC145).
+
+* More instruments (GNS430, Comm[0], KNS80, CDU) 
+  were connected to the electrical model 
+  via new voltage outputs and property rules that 
+  test conditions on these voltage outputs nodes, for 
+  each instrument.    
+  See in Systems/electrical.xml and Systems/filter.xml. 
+  This replaces some of the simple conditions on
+  overhead panel switches found in v1.3. 
+  These were replaced by the above.
+
+* The local copies of kns80 and kx165 were removed, 
+  and replaced again by the global models in
+  /Instruments-3d/.. because they just contained
+  electrical connection code now implemented via the
+  electrical model.
+  See in Systems/electrical.xml and Systems/filter.xml.
+  
+  ***
+  Please do not connect instruments via extra conditions in 
+  the instrument model, but by using the electrical model
+  instead.
+  ***
+
+* Instruments on centre console re-arranged because 
+  one transponder removed (why did we need two
+  transponders?).
+  
+* Avionics background sound connected to the electrical model 
+  via voltage outputs for avio[0] or avio[1] buses
+  (instead of OH panel switches).
+
+* The rotor brake was removed from the overhead panel. 
+  The rotor brake is located on the cockpit floor
+  right hand side of the pilot seat in all the 
+  EC/H-145 models, not in the OH panel. 
+  A rotor brake lever was added there 
+  in the ec145.ac main 3D model.
+  
+* All analog gauges used in the EC-145 were copied from 
+  the common FG instruments-3d folder to the aircraft
+  Models/instruments folder and their textures improved 
+  (high-res and made more EC-145 specific, where needed)
+
+* All bezels of analog gauges were included in the mainpanel
+  3D model to allow for the shadow maps to work properly
+  
+* A moving map (DMAP) screen page was added to the Helionix 
+  centre MFD screen, based on the FG1000 code (in fact the 
+  whole map display approach was duplicated from the GNS430 
+  code). See changes in Nasal/FGUK1000.nas. 
+  Object 'Screen4' in the mainpanel model in
+  Models/mainpanel/fg1000-dmap.xml included into  
+  Models/mainpanel/ec145-main-panel.xml is used for
+  FG1000 map.
+  
+* The GNS430 was extended to use the map zoom with 
+  the available 'RNG' buttons of the GNS430 3D model.
+
+* Controls: The cyclic stick grip and two different variants of the 
+  collective lever for H-145 and EC-145 (with functional
+  "twist grips"), respectively. 
+
+* Cockpit doors interior and the headset holder located 
+  at the centre windshield spar 
+  were modelled in 3D. 
+
+* The text messages on the Helionix FND masterlist are 
+  now coloured according to priority.
+
+* A quickstart option was added to the main menue that 
+  starts engines and rotors as fast as possible without making 
+  use of the realistic engine startup procedure.
+  
+* The EC-145 specific manual startup procedure was added 
+  to aircraft checklists (twist grip settings are needed for start!).
+  
+* The AP control panel texture was improved (hi-res marking and 
+  literals). The AP control panel buttons bindings are now compatible 
+  with the fg  standard autopilot properties.

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+        <aircraft-registration type="string">G-SASN</aircraft-registration>
+	<model>
+		<livery>
+			<name type="string">Scottish Ambulance Service</name>
+			<texture>liveriesH/SAS/SAS.png</texture>
+			<texture-tail>liveriesH/SAS/SASHt.png</texture-tail>
+			<rotor>liveriesH/SAS/black.png</rotor>
+			<texture-skids>liveriesH/blackskids.png</texture-skids>
+			<texture-radar>liveriesH/SAS/Radome.png</texture-radar>
+			<texture-mounts>liveriesH/SAS/WeaponsMounts.png</texture-mounts>
+		</livery>
+		<bk117>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bk117>
+	</model>
+	<rendering>
+    <refl_correction type="string">-0.3</refl_correction>
+	<fresnel-factor>0.7</fresnel-factor>
+    </rendering>
+</sim>
+
+</PropertyList>

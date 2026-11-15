@@ -1,0 +1,43 @@
+A brief explaination to all those shadow effect files:
+
+the ALS shadow effect consists of 
+
+1. the cube-map images in Models/Effects/cubemap
+2. the new *.eff effect files in Models/Effects
+3. the call to the effect files in the respective 3d model files Models/EC-145.xml (for interior, panel and glareshield)
+
+in EC-145.xml add:
+
+[code]
+<!-- interior shadows on glareshield and interior fuselage--> 
+<effect>
+  <inherits-from>Aircraft/ec145/Models/Effects/bk117interior-shadows</inherits-from>
+  <object-name>seat1</object-name> 
+  <object-name>seat2</object-name> 
+  <object-name>floor</object-name> 
+  <object-name>intFrontdoorL</object-name> 
+  <object-name>intFrontdoorR</object-name> 
+  <object-name>stickleather</object-name> 
+  <object-name>stickleather.001</object-name> 
+  <object-name>interior</object-name> 
+  <object-name>fuselage.004</object-name> 
+  <object-name>fuselage.005</object-name>     
+</effect>
+
+<!--glareshield-->
+<effect>
+  <inherits-from>Aircraft/ec145/Models/Effects/bk117glaresh-shadows</inherits-from>
+  <object-name>444</object-name>     
+</effect>
+
+<!-- interior shadows on main instrument panel -->
+<effect>
+  <inherits-from>Aircraft/ec145/Models/Effects/bk117panel-shadows</inherits-from>
+  <object-name>panel</object-name> 
+</effect>
+[/code]
+
+Note:
+
+The MFDs bezels are now directly integrated within the mainpanel model, to simplify shadow cubemap definitions. 
+Therefore they do not make use of individual effect files anymore, previously located in /Models/instruments/EUcopter-mfd-c/Effects .

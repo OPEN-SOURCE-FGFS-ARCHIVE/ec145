@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+        <aircraft-registration type="string">G-SCAA</aircraft-registration>
+	<model>
+		<livery>
+			<name type="string">Scottish Charities Air Ambulance</name>
+			<texture>liveries/SCAA.png</texture>
+			<texture-skids>liveries/SCAAskids.png</texture-skids>
+		</livery>
+		<bk117>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bk117>
+	</model>
+	<rendering>
+    <refl_correction type="string">-0.22</refl_correction>
+	<fresnel-factor>0.7</fresnel-factor>
+    </rendering>
+</sim>
+
+</PropertyList>

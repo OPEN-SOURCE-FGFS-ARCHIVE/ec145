@@ -1,0 +1,504 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <path>ec145C2-main-panel.ac</path>
+  
+  <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>150</max-m>
+    </animation>
+
+  <effect>
+      <inherits-from>Aircraft/ec145/Models/Effects/implicit-lightmap</inherits-from> 
+      <object-name>ecp.face</object-name>
+  </effect>
+  
+  <!-- ALS display effect for the MFD screen object , needs FG 2018.3+-->
+  <effect>
+      <inherits-from>Aircraft/ec145/Models/Effects/mfd-screen</inherits-from> 
+      <object-name>xmfd0screen</object-name>
+      <object-name>xmfd1screen</object-name>
+      <object-name>xmfd2screen</object-name>
+      <object-name>xmfd3screen</object-name>
+  </effect>
+
+<!-- interior shadows on main instrument panel -->
+<effect>
+  <inherits-from>Aircraft/ec145/Models/Effects/bk117panel-shadows</inherits-from>
+  <object-name>panel</object-name>
+  
+  <!-- MFD0, pilot (screen background included in shadow effect)-->
+  <object-name>xmfd0bg</object-name>
+  <object-name>mfd0bezel</object-name>
+  <object-name>mfd0knob0</object-name>
+  <object-name>mfd0knob1</object-name> 
+  
+  <!-- MFD1, copilot -->
+  <object-name>xmfd1bg</object-name>
+  <object-name>mfd1bezel</object-name>  
+  <object-name>mfd1knob0</object-name>
+  <object-name>mfd1knob1</object-name>
+  
+  <!-- VEMD, MFD2-->
+  <object-name>vemd.face</object-name> 
+  <object-name>xmfd2bg</object-name>
+  
+  <!-- CAD, MFD3 -->
+  <object-name>cad.face</object-name>
+  <object-name>xmfd3bg</object-name>
+  
+  <!-- Engine Control Panel-->
+  <object-name>ecp.face</object-name>
+  <object-name>base</object-name>
+  <object-name>base.001</object-name>
+  <object-name>base.002</object-name>
+  <object-name>base.003</object-name>
+  <object-name>base.004</object-name>
+  <object-name>main1</object-name>
+  <object-name>main2</object-name>
+  
+  <!-- standby ADI static parts -->
+  <object-name>adi.button</object-name>
+  <object-name>adi.mount</object-name>
+  <object-name>adi.ring</object-name>
+  <object-name>adi.scale</object-name>
+  <object-name>adi.plane</object-name>
+  <!-- standby ALT static parts -->
+  <object-name>alt.button</object-name>
+  <object-name>alt.mount</object-name>
+  <object-name>alt.ring</object-name>
+  <!-- standby IAS  static parts -->
+  <object-name>ias.mount</object-name>
+  <object-name>ias.ring</object-name>
+  <!-- clock static parts -->
+  <object-name>clock.mount</object-name>
+  <object-name>clock.ring</object-name>
+  <!-- tachimeter static parts -->
+  <object-name>tach.mount</object-name>
+  <object-name>tach.ring</object-name>
+  
+  <!-- other main panel objects, vent nozzle, push buttons, ..-->
+  <object-name>vent0.1</object-name>
+  <object-name>vent0.2</object-name>
+  <object-name>vent0.3</object-name>
+  <object-name>vent0.4</object-name>
+  <object-name>vent1.1</object-name>
+  <object-name>vent1.2</object-name>
+  <object-name>vent1.3</object-name>
+  <object-name>vent1.4</object-name>
+  
+  <object-name>PB.000</object-name>
+  <object-name>PB.001</object-name>
+  <object-name>PB.002</object-name>
+  <object-name>PB.003</object-name>
+  <object-name>PB.004</object-name>
+  <object-name>PB.005</object-name>
+  <object-name>callsgn.001</object-name>
+  <object-name>callsgn.000</object-name>
+  
+</effect>
+
+ <!-- the mfd screen needs to be emissive to see the canvas,
+      the screen contents are included as canvas via Nasal -->
+
+ <animation> 
+    <type>material</type> 
+    <object-name>xmfd0screen</object-name>
+    <object-name>xmfd1screen</object-name>
+    <object-name>xmfd2screen</object-name>
+    <emission>
+      <red>1.0</red>
+      <green>1.0</green>
+      <blue>1.0</blue>
+<!--       <factor-prop>controls/lighting/instrument-lights-norm</factor-prop> -->
+    </emission>    
+    <ambient>
+      <red>0.0</red>
+      <green>0.0</green>
+      <blue>0.0</blue>
+    </ambient>
+    <diffuse>
+      <red>0.0</red>
+      <green>0.0</green>
+      <blue>0.0</blue>
+    </diffuse>
+ </animation>
+ 
+  <!-- effect of overhead floodlight as material emission, 
+  'cheap trick' to simulate ambient cabin lighting 
+  -->
+
+ <animation> 
+  <type>material</type> 
+  
+  <object-name>panel</object-name>
+  <object-name>mfd0bezel</object-name>
+  <object-name>mfd0knob0</object-name>
+  <object-name>mfd0knob1</object-name> 
+  <object-name>mfd1bezel</object-name>  
+  <object-name>mfd1knob0</object-name>
+  <object-name>mfd1knob1</object-name>
+  <object-name>vemd.face</object-name> 
+  <object-name>cad.face</object-name>
+  <object-name>cabinheat</object-name>
+  <object-name>ecp.face</object-name>
+  <object-name>base</object-name>
+  <object-name>base.001</object-name>
+  <object-name>base.002</object-name>
+  <object-name>base.003</object-name>
+  <object-name>base.004</object-name>
+  <object-name>main1</object-name>
+  <object-name>main2</object-name>
+  <object-name>adi.button</object-name>
+  <object-name>adi.mount</object-name>
+  <object-name>adi.ring</object-name>
+  <object-name>adi.scale</object-name>
+  <object-name>adi.plane</object-name>
+  <object-name>alt.button</object-name>
+  <object-name>alt.mount</object-name>
+  <object-name>alt.ring</object-name>
+  <object-name>ias.mount</object-name>
+  <object-name>ias.ring</object-name>
+  <object-name>clock.mount</object-name>
+  <object-name>clock.ring</object-name>
+  <object-name>tach.mount</object-name>
+  <object-name>tach.ring</object-name>
+  <object-name>vent0.1</object-name>
+  <object-name>vent0.2</object-name>
+  <object-name>vent0.3</object-name>
+  <object-name>vent0.4</object-name>
+  <object-name>vent1.1</object-name>
+  <object-name>vent1.2</object-name>
+  <object-name>vent1.3</object-name>
+  <object-name>vent1.4</object-name>
+  <object-name>PB.000</object-name>
+  <object-name>PB.001</object-name>
+  <object-name>PB.002</object-name>
+  <object-name>PB.003</object-name>
+  <object-name>PB.004</object-name>
+  <object-name>PB.005</object-name>
+    
+  <emission>
+    <red>0.02</red>
+    <green>0.02</green>
+    <blue>0.02</blue>
+    <factor-prop>/systems/electrical/outputs/floodlight</factor-prop> 
+  </emission>    
+</animation>
+ 
+<!-- <animation> 
+    <type>material</type> 
+    <object-name>xmfd3screen</object-name>
+    <emission>
+      <red>1.0</red>
+      <green>1.0</green>
+      <blue>1.0</blue>
+      <factor-prop>controls/lighting/stdby-instrument-lights-norm</factor-prop>
+    </emission>    
+    <ambient>
+      <red>0.0</red>
+      <green>0.0</green>
+      <blue>0.0</blue>
+    </ambient>
+    <diffuse>
+      <red>0.0</red>
+      <green>0.0</green>
+      <blue>0.0</blue>
+    </diffuse>
+ </animation>-->
+
+ <text>
+      <name>callsign RHS</name>
+      <offsets>
+          <x-m>-2.781</x-m>
+          <y-m>0.25</y-m>
+          <z-m>0.512</z-m>
+          <pitch-deg>-15</pitch-deg>
+      </offsets>
+      <alignment>center-center</alignment>
+      <axis-alignment>yz-plane</axis-alignment>
+      <type type="string">text-value</type>
+      <property>sim/aircraft-registration</property>
+      <font>helvetica_bold.txf</font>
+      <character-size>0.008</character-size>
+      <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+      <font-resolution>
+          <width type="int">64</width>
+          <height type="int">64</height>
+      </font-resolution>
+  </text> 
+
+  <text>
+      <name>callsign LHS</name>
+      <offsets>
+          <x-m>-2.781</x-m>
+          <y-m>-0.27</y-m>
+          <z-m>0.512</z-m>
+          <pitch-deg>-15</pitch-deg>
+      </offsets>
+      <alignment>center-center</alignment>
+      <axis-alignment>yz-plane</axis-alignment>
+      <type type="string">text-value</type>
+      <property>sim/aircraft-registration</property>
+      <font>helvetica_bold.txf</font>
+      <character-size>0.008</character-size>
+      <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+      <font-resolution>
+          <width type="int">64</width>
+          <height type="int">64</height>
+      </font-resolution>
+  </text> 
+  
+  <!-- slipskidball of the MFD0 -->
+  <animation>
+      <type>rotate</type>
+      <object-name>slipskidball0</object-name>
+      <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+      <factor>5.729</factor>
+      <!--
+          From the source for slip_skid_ball.cxx, the number returned is (-z_accel/y_accel)*10.
+          For small theta, theta~=tan(theta) when theta is in radians.  So the angle of a "ball" 
+          undergoing z_accel and y_accel hung on the end of a string makes with the verticle
+          will be approximately -z_accel/y_accel radians. Converting to degrees, multiply by
+          180/pi=57.29, or 5.729 times the returned value. Edited by Dave Perry, 2/26/06.
+          
+          Edit by Daniel Dubreuil june 2014: I'd rather say
+          Angle with the verticle (radians) -y_accel/z_accel
+          FG indicated-slip-skid = -(y_accel/z_accel)*10
+      -->
+      <min-deg>-5</min-deg>
+      <max-deg>5</max-deg>
+      <!--/center-->
+      <axis>
+          <x>-1</x>
+          <y>0</y>
+          <z>-0.25</z>
+      </axis>
+      <center>
+          <x-m>-2.762</x-m>
+          <y-m>0.266</y-m>
+          <z-m>0.436</z-m>
+      </center>
+   </animation>
+   
+  <!-- slipskidball of the MFD1 -->
+  <animation>
+      <type>rotate</type>
+      <object-name>slipskidball1</object-name>
+      <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+      <factor>5.729</factor>
+      <min-deg>-5</min-deg>
+      <max-deg>5</max-deg>
+      <!--/center-->
+      <axis>
+          <x>-1</x>
+          <y>0</y>
+          <z>-0.25</z>
+      </axis>
+      <center>
+          <x-m>-2.762</x-m>
+          <y-m>-0.2978</y-m>
+          <z-m>0.436</z-m>
+      </center>
+   </animation>
+
+   <animation>
+          <object-name>adi.plane</object-name>
+          <type>material</type>
+          <emission>
+                  <factor-prop>controls/lighting/instruments-norm</factor-prop>
+                  <red>0.55</red>
+                  <green>0.24</green>
+                  <blue>0.10</blue>
+          </emission>
+  </animation>
+
+
+  <!-- Engine Control Panel animation -->
+  
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>main1</object-name>
+    <property>/controls/switches/ecp/pos[0]</property>
+    <factor>-40</factor>
+    <offset-deg>20</offset-deg>
+    <center>
+      <x-m>-2.7083</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.2224</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>main1</object-name>
+    <visible>true</visible>
+    
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.5</interval-sec>
+      <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/ecp/pos[0]</property>
+      </binding>   
+   </action>
+    
+  
+  </animation>  
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>main2</object-name>
+    <property>/controls/switches/ecp/pos[1]</property>   
+    <factor>-40</factor>
+    <offset-deg>20</offset-deg>
+    <center>
+      <x-m>-2.7083</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.2224</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>main2</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.5</interval-sec>
+      <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/ecp/pos[1]</property>
+      </binding>   
+
+    </action>
+   
+  </animation>  
+
+
+    <!-- generator 1 -->    
+    
+    <animation>
+        <type>pick</type>
+        <object-name>gen1.sw</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/electric/engine[0]/generator</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click</property>
+            </binding>
+        </action>
+    </animation>    
+
+    <animation>
+        <type>rotate</type>
+        <object-name>gen1.sw</object-name>
+                <property>controls/electric/engine[0]/generator</property>
+        <offset-deg>30.0</offset-deg>                
+        <factor>-30.0</factor>
+        <center>
+            <x-m>-2.7022</x-m>
+            <y-m>0.0000</y-m>
+            <z-m>0.188</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+    
+    <!-- generator 2 -->    
+    
+    <animation>
+        <type>pick</type>
+        <object-name>gen2.sw</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/electric/engine[1]/generator</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click</property>
+            </binding>
+        </action>
+    </animation>    
+
+    <animation>
+        <type>rotate</type>
+        <object-name>gen2.sw</object-name>
+                <property>controls/electric/engine[1]/generator</property>
+        <offset-deg>30.0</offset-deg>        
+        <factor>-30.0</factor>
+        <center>
+            <x-m>-2.7022</x-m>
+            <y-m>0.0000</y-m>
+            <z-m>0.188</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <!-- Battery Master SW-->    
+    
+    <animation>
+        <type>pick</type>
+        <object-name>battmstr.sw</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/electric/battery-switch</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click</property>
+            </binding>
+        </action>
+    </animation>    
+
+    <animation>
+        <type>rotate</type>
+        <object-name>battmstr.sw</object-name>
+        <property>controls/electric/battery-switch</property>
+        <offset-deg>30.0</offset-deg>        
+        <factor>-30.0</factor>
+        <center>
+            <x-m>-2.7022</x-m>
+            <y-m>0.0000</y-m>
+            <z-m>0.188</z-m>
+       </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+</PropertyList>

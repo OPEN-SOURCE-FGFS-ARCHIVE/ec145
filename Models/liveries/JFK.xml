@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+	<model>
+		<livery>
+			<name type="string">Just For Kids </name>
+			<texture>liveries/JFK.png</texture>
+			<rotor>liveries/white.png</rotor>
+			<texture-skids>liveries/JFKskids.png</texture-skids>
+		</livery>
+		<bk117>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bk117>
+	</model>
+	<rendering>
+    <refl_correction type="string">-0.23</refl_correction>
+	<fresnel-factor>0.7</fresnel-factor>
+    </rendering>
+</sim>
+
+</PropertyList>
