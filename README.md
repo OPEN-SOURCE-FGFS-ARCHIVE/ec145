@@ -18,10 +18,10 @@ Run by **SP-NTX** - sp.ntx.flightgear@gmail.com
 
 ## Licensing & Compliance
 
-- **Original Code & Derivatives:** GNU GPL (or compatible upstream terms).
-- **License declared by GitHub:** GNU General Public License v2.0 (`GPL-2.0`)
+- **License:** GNU General Public License v2.0 (`GPL-2.0`)
 - **Archiving basis:** Archived under the Archive's rules: GNU GPL only, no CC-licensed content.
 - **Attribution:** All original authors, modellers, FDM and systems contributors retain full credit. Author names, commit history and provenance are preserved unchanged.
+- **License copy:** A copy of the license (`LICENSE`) was added by the archive maintainer in a separate commit ([`f060561`](https://github.com/OPEN-SOURCE-FGFS-ARCHIVE/ec145/commit/f06056142cc34764fd57013ce9abca1657f62e0d)) to comply with the licensing terms, based on the GPL declaration found in '-set.xml' or 'readme'. This is a preservation courtesy, **not a re-licensing**.
 
 ---
 
